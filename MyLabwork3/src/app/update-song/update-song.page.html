@@ -1,0 +1,29 @@
+<!-- update-song.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/song-list"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Update Song
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Title</ion-label>
+      <ion-input type="text" [(ngModel)]="song!.title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Released</ion-label>
+      <ion-input type="number" [(ngModel)]="song!.released"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Number</ion-label>
+      <ion-input type="number" [(ngModel)]="song!.number"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="updateSong()">Update Song</ion-button>
+</ion-content>

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Add Song
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Title</ion-label>
+    <ion-input type="text" [(ngModel)]="newSong.title"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Released</ion-label>
+    <ion-input type="number" [(ngModel)]="newSong.released"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Number</ion-label>
+    <ion-input type="number" [(ngModel)]="newSong.number"></ion-input>
+  </ion-item>
+  <ion-button (click)="addSong()">Add Song</ion-button>
+</ion-content>
