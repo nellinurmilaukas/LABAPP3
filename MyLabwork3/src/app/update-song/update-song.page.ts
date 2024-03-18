@@ -26,8 +26,6 @@ export class UpdateSongPage implements OnInit {
     if (this.song !== undefined) {
       SONGS[this.songIndex] = this.song;
     }
-    
-    // Optionally, you can save the updated data to a database or storage
 
     // Navigate back to the song list page after updating
     this.router.navigate(['/song-list']);
