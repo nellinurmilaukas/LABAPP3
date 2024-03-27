@@ -5,21 +5,47 @@
     </ion-toolbar>
   </ion-header>
   <ion-content class="ion-padding">
+    This is the menu content.
     <ion-list>
-      <ion-item routerLink="/add">add</ion-item>
-      <ion-item routerLink="/logout">Logout</ion-item>
-      <ion-item routerLink="/songs">Songs</ion-item>
+      <ion-item routerLink="/add-song">Add Song</ion-item>
+      <ion-item routerLink="/song-list">Song List</ion-item>
+      <ion-item routerLink="/update-song">Update Song</ion-item>
+      <ion-item routerLink="/login">Login</ion-item>
     </ion-list>
   </ion-content>
 </ion-menu>
 <div class="ion-page" id="main-content">
+
   <ion-header>
     <ion-toolbar>
       <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
       <ion-title>Tab3</ion-title>
+      <ion-buttons slot="end" *ngIf="authService.loggedIn">
+        <ion-avatar>
+          <ion-icon name="person"></ion-icon>
+        </ion-avatar>
+        <ion-label>{{ authService.username }}</ion-label>
+        <ion-button (click)="logout()">Logout</ion-button>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
-  <ion-content class="ion-padding"> Tap the button in the toolbar to open the menu. </ion-content>
+
+  <ion-content class="ion-padding">
+    Tap the button in the toolbar to open the menu.
+    <div id="card">
+      <ion-card>
+        <img src="https://peda.net/aanekoski/perusopetus/honkolan-koulu/luokkien-sivut/6-lk/ilmoitustaulu2/kukkakuva-jpg:file/photo/820e437771a3252d3fa6bf49990057916bdc7e8d/kukkakuva.jpg"/>
+        <ion-card-header>
+          <ion-card-title>Get started</ion-card-title>
+          <ion-card-subtitle>Nice to see you!</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          Here's a small text description for the card content. Nothing more, nothing less.
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </ion-content>
 </div>

@@ -10,29 +10,39 @@
       <ion-item routerLink="/add-song">Add Song</ion-item>
       <ion-item routerLink="/song-list">Song List</ion-item>
       <ion-item routerLink="/update-song">Update Song</ion-item>
+      <ion-item routerLink="/login">Login/Logout</ion-item>
     </ion-list>
   </ion-content>
 </ion-menu>
 <div class="ion-page" id="main-content">
+
   <ion-header>
     <ion-toolbar>
       <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
-      <ion-title>Tab1</ion-title>
+      <ion-title>Home</ion-title>
+      <ion-buttons slot="end" *ngIf="authService.loggedIn">
+        <ion-avatar>
+          <ion-icon name="person"></ion-icon>
+        </ion-avatar>
+        <ion-label>{{ authService.username }}</ion-label>
+        <ion-button (click)="logout()">Logout</ion-button>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
-  <ion-content class="ion-padding">
-    <!-- Content area -->
-    <ion-card class="card-container">
-      <img src="https://psori.fi/wp-content/uploads/2021/03/Kukkakuva-1200-x-795.png"/>
-      <ion-card-header>
-        <ion-card-title>WELCOME!</ion-card-title>
-        <ion-card-subtitle>Nice to see you!</ion-card-subtitle>
-      </ion-card-header>
-      <ion-card-content>
-        Here's a small text description for the card content. Nothing more, nothing less.
-      </ion-card-content>
-    </ion-card>
-  </ion-content>
-</div>
+
+
+<ion-content class="ion-padding">
+  <!-- Content area -->
+  <ion-card class="card-container">
+    <img src="https://psori.fi/wp-content/uploads/2021/03/Kukkakuva-1200-x-795.png"/>
+    <ion-card-header>
+      <ion-card-title>WELCOME!</ion-card-title>
+      <ion-card-subtitle>Nice to see you!</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Here's a small text description for the card content. Nothing more, nothing less.
+    </ion-card-content>
+  </ion-card>
+</ion-content>
