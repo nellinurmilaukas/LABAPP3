@@ -1,0 +1,27 @@
+ion-content {
+    --background: #717171;
+  }
+  
+  ion-item {
+    --background: #20352b;
+    margin-bottom: 15px;
+  }
+  
+  ion-avatar {
+    --border-radius: 50%;
+  }
+  
+  ion-label {
+    margin-left: 10px;
+  }
+  
+  ion-button {
+    --background: #3880ff;
+    --border-radius: 5px;
+    margin-top: 15px;
+  }
+  
+  ion-button[disabled] {
+    --background: #56b572;
+  }
+  
